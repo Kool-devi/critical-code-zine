@@ -369,6 +369,7 @@ function renderDetails(data) {
         detailScroll.appendChild(d);
     }
 
+    // --- 1. Contributors ---
     if (hasContent(data['Group members'])) {
         let cats = (data['Category'] || "").split(';').map(s => s.trim()).filter(Boolean);
         let badges = ``;
@@ -383,19 +384,39 @@ function renderDetails(data) {
         addCard('CONTRIBUTORS', `<span class="people-name">${data['Group members']}</span>${badges}`);
     }
 
-    if (hasContent(data['Term Definition'])) {
-        addCard('DEFINITION', formatText(data['Term Definition']));
+    // --- 2. Definition (PDF Handling Added) ---
+    const definitionContent = data['Term Definition'];
+    if (hasContent(definitionContent)) {
+        let htmlContent = '';
+
+        // Check if the content is a URL ending in .pdf
+        if (definitionContent.toLowerCase().match(/\bhttps?:\/\/[^\s]+\.pdf\b/)) {
+            // It's a PDF URL: embed it
+            htmlContent = `
+                <div style="height: 500px; border: 1px solid #ccc;">
+                    <iframe src="${definitionContent}" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+                <p class="meta-text" style="margin-top: 10px;">Definition embedded as PDF: <a href="${definitionContent}" target="_blank">Download PDF ↗</a></p>
+            `;
+        } else {
+            // Standard text definition: format paragraphs
+            htmlContent = formatText(definitionContent);
+        }
+        addCard('DEFINITION', htmlContent);
     }
 
+    // --- 3. GAI Engagement ---
     if (hasContent(data['Description of how the definition was developed and how GAI was engaged in the process'])) {
         addCard('GAI ENGAGEMENT', formatText(data['Description of how the definition was developed and how GAI was engaged in the process']));
     }
 
+    // --- 4. Related Projects ---
     if (hasContent(data['Related code/art/media projects'])) {
         let paragraphs = formatText(data['Related code/art/media projects']);
         addCard('RELATED PROJECTS', linkify(paragraphs));
     }
 
+    // --- 5. Project Media ---
     if (hasContent(data['Project Media'])) {
         let mediaFiles = data['Project Media'].split(';').map(s => s.trim()).filter(Boolean);
         let combinedHtml = "";
