@@ -15,7 +15,7 @@ function checkPassword() {
     const input = document.getElementById('pass-input');
     const overlay = document.getElementById('login-overlay');
     const error = document.getElementById('error-msg');
-
+    
     if (input.value === PASSKEY) {
         // Correct Password: Initialize the app
         overlay.style.display = 'none';
@@ -35,13 +35,13 @@ function initializeApp() {
     tabNet = document.getElementById('tab-net');
     viewDir = document.getElementById('view-directory');
     viewNet = document.getElementById('view-network');
-
+    
     // Code Panel Elements
     codeOut = document.getElementById('code-output');
     codeFallbackArea = document.getElementById('code-fallback-area');
     codeDescText = document.getElementById('code-desc-text');
     codeFallbackBtn = document.getElementById('code-fallback-btn');
-
+    
     // Right Panel Elements
     displayTerm = document.getElementById('display-term');
     displayTags = document.getElementById('display-tags');
@@ -56,7 +56,7 @@ function initializeApp() {
     let target = document.getElementById('p5-canvas-target');
     select('canvas').show(); // Show the canvas that was hidden in setup()
     select('canvas').parent('p5-canvas-target'); // Re-attach parent just in case
-
+    
     // CRITICAL FIX: Ensure P5 variables (width/height) are updated *before* node creation
     windowResized();
 
@@ -65,12 +65,12 @@ function initializeApp() {
         download: true,
         header: true,
         skipEmptyLines: true,
-        complete: function (results) {
+        complete: function(results) {
             tableData = results.data;
             initializeNodes();
             calculateConnections();
             populateList();
-
+            
             // Auto-select first node
             if (nodes.length > 0) {
                 selectNode(nodes[0]);
@@ -83,17 +83,17 @@ function initializeApp() {
 function setup() {
     // 0. Setup Password Listener
     document.getElementById('login-btn').addEventListener('click', checkPassword);
-
+    
     // Allow pressing "Enter" key to submit
     document.getElementById('pass-input').addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
-            checkPassword();
+          checkPassword();
         }
     });
-
+    
     // Create canvas once, but make it invisible/tiny until initialized.
     // The parent assignment is done in initializeApp()
-    createCanvas(1, 1).hide();
+    createCanvas(1, 1).hide(); 
 }
 
 function draw() {
@@ -103,23 +103,23 @@ function draw() {
         return;
     }
 
-    background(255);
-
+    background(255); 
+    
     // Only draw nodes if network view is active
     if (viewNet.classList.contains('active')) {
         strokeWeight(1);
-
+        
         // Connections
         for (let node of nodes) {
             let isActive = (node === selectedNode || node.isHovered(mouseX, mouseY));
-
+            
             for (let connection of node.connections) {
                 let partner = connection.partner;
                 if (isActive) {
-                    stroke(0);
+                    stroke(0); 
                     line(node.x, node.y, partner.x, partner.y);
                 } else {
-                    stroke(0, 30);
+                    stroke(0, 30); 
                     line(node.x, node.y, partner.x, partner.y);
                 }
             }
@@ -156,33 +156,33 @@ function windowResized() {
 }
 
 function initializeNodes() {
-    nodes = [];
-    // Since windowResized() was called before this function, 
-    // p5.js width/height are now correct.
-    for (let i = 0; i < tableData.length; i++) {
-        if (tableData[i]['Glossary Term']) {
-            nodes.push(new GlossaryNode(tableData[i], i));
-        }
-    }
+  nodes = [];
+  // Since windowResized() was called before this function, 
+  // p5.js width/height are now correct.
+  for (let i = 0; i < tableData.length; i++) {
+     if(tableData[i]['Glossary Term']) {
+         nodes.push(new GlossaryNode(tableData[i], i));
+     }
+  }
 }
 
 function calculateConnections() {
-    for (let i = 0; i < nodes.length; i++) {
-        let nodeA = nodes[i];
-        if (!hasContent(nodeA.data['Keywords'])) continue;
-        let tagsA = nodeA.data['Keywords'].split(';').map(s => s.trim().toLowerCase());
+  for (let i = 0; i < nodes.length; i++) {
+    let nodeA = nodes[i];
+    if(!hasContent(nodeA.data['Keywords'])) continue;
+    let tagsA = nodeA.data['Keywords'].split(';').map(s => s.trim().toLowerCase());
+    
+    for (let j = i + 1; j < nodes.length; j++) {
+      let nodeB = nodes[j];
+      if(!hasContent(nodeB.data['Keywords'])) continue;
+      let tagsB = nodeB.data['Keywords'].split(';').map(s => s.trim().toLowerCase());
 
-        for (let j = i + 1; j < nodes.length; j++) {
-            let nodeB = nodes[j];
-            if (!hasContent(nodeB.data['Keywords'])) continue;
-            let tagsB = nodeB.data['Keywords'].split(';').map(s => s.trim().toLowerCase());
-
-            if (tagsA.some(t => tagsB.includes(t))) {
-                nodeA.connections.push({ partner: nodeB });
-                nodeB.connections.push({ partner: nodeA });
-            }
-        }
+      if (tagsA.some(t => tagsB.includes(t))) {
+        nodeA.connections.push({ partner: nodeB });
+        nodeB.connections.push({ partner: nodeA });
+      }
     }
+  }
 }
 
 function populateList() {
@@ -213,66 +213,66 @@ function mousePressed() {
 
 // --- Node Class ---
 class GlossaryNode {
-    constructor(data, id) {
-        this.data = data;
-        this.id = id;
-        this.size = 15;
-
-        let padding = 30;
-        // We can rely on width/height being correct here because windowResized() ran in initializeApp()
-        let safeW = width;
-        let safeH = height;
-
-        this.x = random(padding, safeW - padding);
-        this.y = random(padding, safeH - padding);
-
-        this.connections = [];
-
-        let cat = (data['Category'] || "").toLowerCase();
-        this.color = color(100);
-
-        if (cat.includes('brain')) this.color = color('#008060');
-        else if (cat.includes('search')) this.color = color('#0055cc');
-        else if (cat.includes('llm')) this.color = color('#cc3300');
-
-        if (cat.includes(';') || (cat.includes('brain') && cat.includes('llm'))) {
-            this.color = color(50);
-        }
+  constructor(data, id) {
+    this.data = data;
+    this.id = id;
+    this.size = 15;
+    
+    let padding = 30;
+    // We can rely on width/height being correct here because windowResized() ran in initializeApp()
+    let safeW = width;
+    let safeH = height;
+    
+    this.x = random(padding, safeW - padding);
+    this.y = random(padding, safeH - padding);
+    
+    this.connections = [];
+    
+    let cat = (data['Category'] || "").toLowerCase();
+    this.color = color(100); 
+    
+    if (cat.includes('brain')) this.color = color('#008060');
+    else if (cat.includes('search')) this.color = color('#0055cc');
+    else if (cat.includes('llm')) this.color = color('#cc3300');
+    
+    if(cat.includes(';') || (cat.includes('brain') && cat.includes('llm'))) {
+        this.color = color(50); 
     }
+  }
 
-    move() {
-        this.x += random(-0.2, 0.2);
-        this.y += random(-0.2, 0.2);
-        this.x = constrain(this.x, 10, width - 10);
-        this.y = constrain(this.y, 10, height - 10);
-    }
+  move() {
+    this.x += random(-0.2, 0.2);
+    this.y += random(-0.2, 0.2);
+    this.x = constrain(this.x, 10, width - 10);
+    this.y = constrain(this.y, 10, height - 10);
+  }
 
-    isHovered(mx, my) {
-        return (mx > this.x - this.size / 2 && mx < this.x + this.size / 2 &&
-            my > this.y - this.size / 2 && my < this.y + this.size / 2);
-    }
+  isHovered(mx, my) {
+    return (mx > this.x - this.size/2 && mx < this.x + this.size/2 &&
+            my > this.y - this.size/2 && my < this.y + this.size/2);
+  }
 
-    display() {
+  display() {
+    stroke(0);
+    strokeWeight(1);
+    fill(this.color);
+    rect(this.x, this.y, this.size, this.size);
+
+    if (selectedNode === this) {
+        noFill();
         stroke(0);
-        strokeWeight(1);
-        fill(this.color);
-        rect(this.x, this.y, this.size, this.size);
-
-        if (selectedNode === this) {
-            noFill();
-            stroke(0);
-            strokeWeight(2);
-            rect(this.x, this.y, this.size * 2, this.size * 2);
-        }
-
-        if (this.isHovered(mouseX, mouseY) || selectedNode === this) {
-            fill(0);
-            noStroke();
-            textAlign(LEFT);
-            textSize(12);
-            text(this.data['Glossary Term'].toUpperCase(), this.x + 15, this.y + 5);
-        }
+        strokeWeight(2);
+        rect(this.x, this.y, this.size * 2, this.size * 2);
     }
+
+    if (this.isHovered(mouseX, mouseY) || selectedNode === this) {
+        fill(0);
+        noStroke();
+        textAlign(LEFT);
+        textSize(12);
+        text(this.data['Glossary Term'].toUpperCase(), this.x + 15, this.y + 5);
+    }
+  }
 }
 
 // --- Helper Functions ---
@@ -290,15 +290,15 @@ function hasContent(str) {
 }
 
 function linkify(text) {
-    if (!text) return "";
-    var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return text.replace(urlRegex, function (url) {
+    if(!text) return "";
+    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(urlRegex, function(url) {
         return '<a href="' + url + '" target="_blank">' + url + '</a>';
     });
 }
 
 function parseCodeComponent(rawString) {
-    if (!rawString) return { url: null, desc: "" };
+    if(!rawString) return { url: null, desc: "" };
     let urlRegex = /(https?:\/\/[^\s]+)/g;
     let match = rawString.match(urlRegex);
     let url = match ? match[0] : null;
@@ -307,21 +307,21 @@ function parseCodeComponent(rawString) {
 }
 
 function isEmbeddable(url) {
-    if (!url) return false;
-    return (url.includes('editor.p5js.org') ||
-        url.includes('youtube.com') ||
-        url.includes('vimeo.com') ||
-        url.match(/\.(jpeg|jpg|gif|png)$/i));
+    if(!url) return false;
+    return (url.includes('editor.p5js.org') || 
+            url.includes('youtube.com') || 
+            url.includes('vimeo.com') ||
+            url.match(/\.(jpeg|jpg|gif|png)$/i));
 }
 
 function renderDetails(data) {
     displayTerm.innerText = data['Glossary Term'];
-
+    
     // Tags
     displayTags.innerHTML = '';
-    if (hasContent(data['Keywords'])) {
+    if(hasContent(data['Keywords'])) {
         data['Keywords'].split(';').forEach(tag => {
-            if (tag.trim()) {
+            if(tag.trim()) {
                 let s = document.createElement('span');
                 s.className = 'tag';
                 s.innerText = tag.trim();
@@ -334,11 +334,11 @@ function renderDetails(data) {
     let codeRaw = data['Code Component'];
     if (hasContent(codeRaw)) {
         let codeData = parseCodeComponent(codeRaw);
-
+        
         if (codeData.url && isEmbeddable(codeData.url)) {
             codeOut.style.display = 'flex';
             codeFallbackArea.style.display = 'none';
-            if (codeData.url.match(/\.(jpeg|jpg|gif|png)$/i)) {
+            if(codeData.url.match(/\.(jpeg|jpg|gif|png)$/i)) {
                 codeOut.innerHTML = `<img src="${codeData.url}">`;
             } else {
                 codeOut.innerHTML = `<iframe src="${codeData.url}" title="Code"></iframe>`;
@@ -351,7 +351,7 @@ function renderDetails(data) {
         } else {
             codeOut.style.display = 'none';
             codeFallbackArea.style.display = 'flex';
-            codeDescText.innerText = codeRaw;
+            codeDescText.innerText = codeRaw; 
             codeFallbackBtn.style.display = 'none';
         }
     } else {
@@ -371,32 +371,39 @@ function renderDetails(data) {
 
     // --- 1. Contributors ---
     if (hasContent(data['Group members'])) {
-        let cats = (data['Category'] || "").split(';').map(s => s.trim()).filter(Boolean);
+        let cats = (data['Category'] || "").split(';').map(s=>s.trim()).filter(Boolean);
         let badges = ``;
         cats.forEach(c => {
             let cls = 'cat-default';
             let lowerC = c.toLowerCase();
-            if (lowerC.includes('brain')) cls = 'cat-brain';
-            else if (lowerC.includes('search')) cls = 'cat-search';
-            else if (lowerC.includes('llm')) cls = 'cat-llm';
+            if(lowerC.includes('brain')) cls = 'cat-brain';
+            else if(lowerC.includes('search')) cls = 'cat-search';
+            else if(lowerC.includes('llm')) cls = 'cat-llm';
             badges += `<span class="method-badge ${cls}">${c}</span>`;
         });
         addCard('CONTRIBUTORS', `<span class="people-name">${data['Group members']}</span>${badges}`);
     }
 
-    // --- 2. Definition (PDF Handling Added) ---
+    // --- 2. Definition (PDF Handling Updated for Local Files) ---
     const definitionContent = data['Term Definition'];
     if (hasContent(definitionContent)) {
         let htmlContent = '';
-
-        // Check if the content is a URL ending in .pdf
-        if (definitionContent.toLowerCase().match(/\bhttps?:\/\/[^\s]+\.pdf\b/)) {
+        
+        // Regex to match anything ending in .pdf, including filenames without http/s
+        if (definitionContent.toLowerCase().match(/\.pdf\b/)) {
+            
+            let pdfLink = definitionContent;
+            // If the link does NOT start with http, assume it's local (in /media/)
+            if (!pdfLink.startsWith('http')) {
+                pdfLink = "media/" + pdfLink;
+            }
+            
             // It's a PDF URL: embed it
             htmlContent = `
                 <div style="height: 500px; border: 1px solid #ccc;">
-                    <iframe src="${definitionContent}" width="100%" height="100%" style="border: none;"></iframe>
+                    <iframe src="${pdfLink}" width="100%" height="100%" style="border: none;"></iframe>
                 </div>
-                <p class="meta-text" style="margin-top: 10px;">Definition embedded as PDF: <a href="${definitionContent}" target="_blank">Download PDF ↗</a></p>
+                <p class="meta-text" style="margin-top: 10px;">Definition embedded as PDF: <a href="${pdfLink}" target="_blank">Download PDF ↗</a></p>
             `;
         } else {
             // Standard text definition: format paragraphs
@@ -404,12 +411,12 @@ function renderDetails(data) {
         }
         addCard('DEFINITION', htmlContent);
     }
-
+    
     // --- 3. GAI Engagement ---
     if (hasContent(data['Description of how the definition was developed and how GAI was engaged in the process'])) {
         addCard('GAI ENGAGEMENT', formatText(data['Description of how the definition was developed and how GAI was engaged in the process']));
     }
-
+    
     // --- 4. Related Projects ---
     if (hasContent(data['Related code/art/media projects'])) {
         let paragraphs = formatText(data['Related code/art/media projects']);
@@ -428,15 +435,15 @@ function renderDetails(data) {
             }
 
             combinedHtml += `<div class="media-item" style="margin-bottom: 20px;">`;
-
+            
             if (mediaFile.match(/\.(mp4|webm|mov)$/i)) {
-                combinedHtml += `<video controls style="width:100%"><source src="${src}"></video>`;
+                 combinedHtml += `<video controls style="width:100%"><source src="${src}"></video>`;
             } else {
-                combinedHtml += `<img src="${src}" style="width:100%; border: 1px solid var(--ink); display:block;">`;
+                 combinedHtml += `<img src="${src}" style="width:100%; border: 1px solid var(--ink); display:block;">`;
             }
             combinedHtml += `</div>`;
         });
-
+        
         addCard('PROJECT MEDIA', `<div class="media-box">${combinedHtml}</div>`);
     }
 }
