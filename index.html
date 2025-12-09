@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Code Glossary</title>
+
+    <!-- FONTS: Space Grotesk (Headers) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. HEADER ROW -->
+    <header class="grid-header">
+        <div class="brand">
+            <h1>Critical Code Glossary</h1>
+        </div>
+        <div class="meta">
+            <a href="about.html" class="btn btn-secondary">What is this site and space?</a>
+        </div>
+    </header>
+
+    <!-- 2. LEFT PANEL (Nodes & Code) -->
+    <aside class="grid-left">
+
+        <!-- A. Navigation Tabs (Nodes First, Default Active) -->
+        <div class="tab-container">
+            <button id="tab-net" class="tab-btn active">NODES</button>
+            <button id="tab-dir" class="tab-btn">DIRECTORY</button>
+        </div>
+
+        <!-- B. Viewport (Graph First, Default Active) -->
+        <div class="viewport-container">
+            <!-- Network Graph -->
+            <div id="view-network" class="view-layer active">
+                <div id="p5-canvas-target"></div>
+            </div>
+            <!-- Directory List -->
+            <div id="view-directory" class="view-layer">
+                <ul id="dir-list"></ul>
+            </div>
+        </div>
+
+        <!-- C. Code Component -->
+        <div class="code-container">
+            <div class="panel-label">
+                <span>CODE_COMPONENT</span>
+            </div>
+            <div id="code-output">
+                <div class="waiting-text">WAITING_FOR_SELECTION...</div>
+            </div>
+            <!-- Fallback Area -->
+            <div id="code-fallback-area" style="display:none;">
+                <p id="code-desc-text"></p>
+                <a id="code-fallback-btn" href="#" target="_blank" class="btn btn-primary">GO TO CODE EXAMPLE ↗</a>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- 3. RIGHT PANEL (Details) -->
+    <main class="grid-right">
+
+        <div class="term-header">
+            <h2 id="display-term">SELECT_TERM</h2>
+            <div id="display-tags"></div>
+        </div>
+
+        <div id="detail-scroll">
+            <div class="intro-block">
+                <p>SYSTEM READY.</p>
+                <p>Select a term from the network or directory to begin.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="sketch.js"></script>
+</body>
+
+<!-- Add this immediately after the <body> tag -->
+<div id="login-overlay">
+    <div class="login-box">
+        <h2>ACCESS_CONTROL</h2>
+        <p>RESTRICTED ENVIRONMENT. ENTER PASSKEY.</p>
+        <input type="password" id="pass-input" placeholder="PASSKEY">
+        <button id="login-btn">AUTHENTICATE</button>
+        <p id="error-msg" style="color: red; display: none;">ACCESS_DENIED</p>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,525 @@
+﻿Group members,Glossary Term,Keywords,Category,Term Definition,Description of how the definition was developed and how GAI was engaged in the process,Code Component,Project Media,Related code/art/media projects
+Hayley Shing (She/Her) Kissa Fatima (She/Her) Kayli Chow (She/Her),AI Hallucination,AI; LLM; Data Set; AI Hallucination; Training Data,Search Engine Assisted,"AI ""hallucinations"" refer to when large language models produce an output confidently that is plausible yet false, instead of acknowledging uncertainty when confronted with difficulties in questions. An example of this would be asking ChatGPT, ""When is Kayli Chow's Birthday?"", and it answers with ""September 30"" rather than ""I don't know."" These errors are referred to as ""hallucinations"" because the answers have no source or basis for the generated information, but it must be acknowledged that it is a human-based word that unreasonably anthropomorphizes Large Language Models (LLMs), so alternate terms such as confabulation may be preferred.
+
+There are many different types of “hallucinated” information provided by AI. A study done by Yujie Sun et al. establishes eight main types of distorted information provided in AI responses, which include overfitting/overconfident responses, unfounded fabrication/fake information, logical errors, reasoning errors, mathematical errors, factual errors, text output errors, and other general types of misinformation, further subdivided into 31 second-level error types. (Sun et al. 2024). While this classification may not encompass all error types and may not be perfect, having methods of classification can help users and researchers more easily identify such distortions when encountered, thereby stopping the propagation and use of such disinformation.
+
+There are several reasons why AI “hallucination” occurs, the primary one being the current method of training for LLMs. When LLMs are trained, the models are rewarded points when a correct response is given, and no points when no response is given. This creates a situation where attempting to guess an answer is more beneficial to the models than admitting uncertainty. Additionally, incorrect answers also help to yield data. Over many iterations of the model, a final model that strategically guesses appears to be more effective than one that provides no answers, as its accuracy rate would be higher (Kalai et al., 2025). Adding to this, the closed-off “Cathedral” model of AI development tends to produce buggy software because its internal processes are not broadly tested, challenged, or visible, so these model iteration bugs survive until the final iteration. (Raymond, 2001)
+
+Another factor contributing to this phenomenon is the use of incomplete and biased data sets. Large language models rely on input data to generate responses, so the quality and relevance of training datasets will dictate the model’s behavior and the quality of its outputs. Large datasets, while rich in information, contain both accurate and inaccurate content, as well as societal and cultural biases. For example, the UTKFace dataset’s annotations only contain binary choices for gender, and categorize race as White, Black, Asian, Indian, or ‘Others.’ (Crawford et al., 2020) Since these models mimic patterns in their training data without the ability to discern truth, they can reproduce any falsehoods or biases present in that data. (Weise & Metz, 2023)
+
+Blindly trusting generated responses can lead to disinformation and misleading conclusions. For example, Deloitte was recently found to have used AI-generated content in its welfare report for the Australian government. The report was full of “fabricated quotes attributed to a federal court judge and references to nonexistent reports attributed to law and software engineering experts” (Paoli, 2025), which is dangerous, especially when included in official documents related to the welfare of the people. In light of these hallucinations, we must consider “what is lost, who is harmed, and what should be forgotten with the embrace of artificial intelligence in decision making.” (Noble, 2017) To counteract these “hallucinations”, users should do proper research, probe the LLMs deeper, double-check all responses, and address biases by increasing multiple perspectives. (Lakhani, 2023)
+
+Sources: 
+
+Avital, M. (2011). The Generative Bedrock of Open Design. Retrieved from https://opendesignnow.org/index.html%3Fp=405.html  
+
+Lakhani, K. (2023). How can we counteract generative AI’s hallucinations? Retrieved from https://d3.harvard.edu/how-can-we-counteract-generative-ais-hallucinations/ 
+
+Research guides: Artificial intelligence (AI) and information literacy: What does ai get wrong?. (2025, August 25). https://lib.guides.umd.edu/c.phpg=1340355&p=9880574  
+
+Sun, Y., Sheng, D., Zhou, Z., & Wu, Y. (2024). AI hallucination: Towards a comprehensive classification of distorted information in artificial intelligence-generated content. Retrieved from https://www.nature.com/articles/s41599-024-03811-x#Sec7 
+
+Zhang, E., Kalai, A., Vempala, S., & Nachum, O. (2025, September 4). Why Language Models Hallucinate. Arxiv.org. https://arxiv.org/html/2509.04664v1#S4 
+
+Crawford, Kate, and Trevor Paglen. “Excavating AI: The Politics of Images in Machine Learning Training Sets.” Excavating AI, 2020. Internet Archive, web.archive.org/web/20250630111240/https://excavating.ai/ 
+
+Raymond, Eric S. The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary. O’Reilly, 2001. 
+
+Noble, Safiya. Algorithms of Oppression: How Search Engines Reinforce Racism, 12 Dec.     2016, safiyaunoble.com/wp-content/uploads/2020/09/Algorithms_Oppression_Introduction_Intro.pdf ","The definition was developed through extensive online research and the use of our critical thinking. All writing is either created with our brains or cites academic sources. The only use of generative AI in this definition is for research and summary purposes. We used ChatGPT to generate a definition for our topic as a part of our initial research, but it was a general description lacking in detail, citations, and failing to acknowledge the larger picture of the dangers of AI hallucinations and misinformation. These are all things the “Search Engine Assisted” definition we wrote touches in depth.",https://kaylichow.ocaduwebspace.ca/AiCrystalBall/,,https://zachblas.info/works/im-here-to-learn-so/
+"Simudzo Chitondo, Shane Colby, Ana Laura Silva. Yihao Liang",AI Editing,"Video editing apps; Cutting out time; subtitles; AI voice changers; Generative; Video; Editing, Slop; Text to speech; Video development; Alteration; Editing tool
+
+",Brain only; Search Engine Assisted; LLM Assisted,"Ai video editing – Shane, SImudzo, Ana and Yihao (SEARCH ENGINE ASSISTED) 
+
+AI video editing apps/cutting out time, subtitles, AI voice changers in CapCut - Simudzo  
+
+AI Voice Changer- 
+
+CapCut - The app has several AI features available, such as:  
+
+AI voice changers to change the audio of an mp3 file or video being edited in the timeline 
+
+
+An “Effects” section which allows you to add certain elements of sound, such as a deeper sounding voice or an echo to whatever sound is imported into the video being edited 
+
+ 
+
+ 
+
+Personal experience:  
+
+ 
+
+AI Voice changer is being used for self-tape auditions of mine to seem more authentic. It stops my agent from getting mad at me when I can’t find someone available to help me read, but I haven’t booked any roles using this method.  
+
+ 
+
+Global Impact: 
+
+ 
+
+This has been used as a scamming tool using the faces and voices of politicians to deceive people. A personal experience I had was a Mr. Beast video convincing people to join a Telegram group on YouTube as an ad that played before videos. This was during the crypto-craze of COVID-19, where more people were seemingly willing to experiment with crypto currency, launching their own crypto coins and influencing/convincing youth the delve into exploring crypto currency and minting. 
+
+ 
+
+While editing a video for a past friend of mine, a topic the guest speaker spoke about was how there was a video of a terrible plot to get more and more people to move into cities, with the face and voice of Justin Trudeau, despite the fact that it was AI-generated.  
+
+ 
+
+AI Slop is another very good example of AI editing, cap cut offers features like being able to generate an entire video (using AI image and video generation) while reading out a provided script. If you would couple this with AI tools like ChatGPT it means many channels can flood digital platforms like YouTube Short and Instagram with videos significantly faster than any channel not using these methods. The dopamine exploiting nature of shortform content like this allows these videos to gain traction even when they don’ty have much actual substance to them.  
+
+ 
+
+ 
+
+ AI Dead Air Removal 
+
+ 
+
+Personal Experience:  
+
+Timebolt - This is an AI tool I have used to take long videos and cuts out all the silences to expediate the editing process, which has helped me with school assignments and helps me quicker find the parts of the video I want to completely cut out. The way Timebolt does this is by running your video through its programming, detecting any silences lasting longer than a second or slightly more, and removing them from video.  
+
+ 
+
+Global Impact 
+
+ 
+
+It was a rare and specific app to find where the selling point was cutting out dead air, but I imagine as more of these apps pop up around the world, it will make video editing and the speed at which people can edit together videos recorded over long periods of time a much more efficient task. 
+
+ 
+
+Sources:  
+
+CapCut. (n.d.). Take your video to the next level: CapCut Desktop—Powerful free video editing tool. Retrieved October 23, 2025, from https://www.capcut.com/tools/desktop-video-editorLinks to an external site. 
+
+ElevenLabs. (n.d.). AI voice changer — Transform your voice into another with our AI voice changer. Retrieved October 23, 2025, from https://elevenlabs.io/voice-changer#:~:text=An%20AI%20voice%20changer%20is,but%20in%20a%20different%20voiceLinks to an external site.. (elevenlabs.ioLinks to an external site.) 
+
+TimeBolt. (n.d.). TimeBolt: Rapid jump-cut video editor. Retrieved October 23, 2025, from https://www.timebolt.io/Links to an external site. 
+
+Zhang, R. (2024, April 2). Exploring the Science Behind Short Form Media’s Addicting Algorithm. The Columbia Science Review. https://www.thecolumbiasciencereview.com/Links to an external site.  
+
+ 
+
+AI video alteration and replacement - Yihao 
+
+ 
+
+Brain Only 
+
+ 
+
+Alteration - Using AI to change content in a piece of a video, it could be visual or auditory. Creating content those are not originally in the video.  
+
+ 
+
+This method usually deals with enhancing the watch experience of the audience, a clear example of this term is increasing the frame per second in video or video games. To me, this is a great technique; it could refine the old movies and videos, providing a better experience of watching. 
+
+ 
+
+Replacement - Replacing some of the elements in a video, changing them into others, the most common example is replacing people’s faces in a video. From my point of view, this technique is dangers as it could create a video content which a people doing something that he didn’t do, this can be easily used for fraud or spread false information. 
+
+ 
+
+ 
+
+ 
+
+Search Engine 
+
+ 
+
+AI video alteration - https://api.video/what-is/video-alteration/Links to an external site. 
+
+ 
+
+-Modifying existing video content with AI tools and advanced digital techniques. 
+
+-Including many manipulations, from subtle enhancements to dramatic transformations on video footage, it combines elements of Computer Vision, Generative AI, and traditional video editing to change, improve, or completely reimagine video content. 
+
+ 
+
+-Techniques used for video alteration 
+
+-Deep learning models 
+
+-Motion estimation and compensation 
+
+-Image painting 
+
+-Style transfer 
+
+-Face swapping and reenactment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+-Future potential 
+
+- Real-Time Alteration, Enhanced Personalization, AI-Driven Creative Editing, Improved Detection of Altered Videos and Integration with Virtual and Augmented Reality. 
+
+ 
+
+api.video. (n.d.). What is video alteration?: Api.video glossary. api.video. https://api.video/what-is/video-alteration/Links to an external site. 
+
+ 
+
+AI Capcut Automatic Speech Recognition (ASR); Transcription and Subtitles. - Ana 
+
+(SEARCH ENGINE ASSISTED) 
+
+ 
+
+About- 
+
+Capcut, a very popular editing app, offers auto-captioning tools that utilize ASR technology, permitting the conversion from voice to text smoothly.  
+
+ 
+
+Personal Experience- 
+
+Through testing, I’ve recognized that the algorithm transcribes most of my voice in english accurately, which is impressive, considering that this is my second language. However, my accent is not so thick, and it still struggles to transcribe specific things such as acronyms, non-english names, slang, among others.  
+
+ 
+
+I presume that the technology is less advanced in other languages, especially in those who have fewer speakers and/or do not have large databases (of words, accents, vowels, etc).  
+
+ 
+
+Usage for accessibility learning- 
+
+Usage of AI transcripts/ASR to produce accessible content for the deaf and users with disabilities, and how the technology improvements help them in their learning process-  
+
+ 
+
+-Automatic Speech Recognition (ASR) and its accuracy/effectiveness.- 
+
+As an example, there was an educational study in ASR in the Indonesian language, a large language, the 11th most spoken language in the world according to Ethnologue; 
+
+ 
+
+In this study, 9 videos were chosen and compared to automatic transcriptions. Jiwer software and OpenAI Whisper ""normalized"" the data , which was then analyzed to calculate WER (word error rate). The results were considered ""excellent"" as the word error rate was about 3.08%; however, content analysis revealed a need for minor manual editing of technical terms, and sentence structure to improve readability, revealing the specific limitations this technology faces; 
+
+In another study, however, In a much ""smaller"" language, Catalan (small presence in digital world) they did unfortunately find out that the performance of ASR in it was way worse than expected. This was due to the difficulty of detecting its regional accents, peculiar vocabulary, and catalan-specific diacritics (accents, cedillas and details);  
+
+Therefore, most major organizations still do not support the language in subtitle generation; A significant conclusion in the paper was an emphasis on the importance of human manual intervention and review to ensure correct Catalan transcriptions. 
+
+Based on these two studies, we can conclude that there is a correlation between the digital presence of a language and the advancement in ASR technology of it; 
+
+Sources- 
+
+Source: Giovanni, N., & Nurhayat, W. (2025). The effectiveness of automatic speech recognition in the CAPCUT application for developing Inclusive Learning Media. JKTP: Jurnal Kajian Teknologi Pendidikan, 8(2), 157–169. https://doi.org/10.17977/um038v8i22025p157Links to an external site. 
+
+ 
+
+Ramírez-Mitjans, S., Ni, H., Moseguí, J., Puerta, J., Vera, M., & Gibert, K. (2024). Pushing the boundaries of natural language processing (NLP): Enhancing Catalan text transcription through large-scale models in the educational field. In Frontiers in Artificial Intelligence and Applications, (Vol. 390, pp. 153-162). IOS Press. https://doi.org/10.3233/FAIA240428Links to an external site. 
+
+ 
+
+AI Upscaling and Visual Enhancement – Shane Colby 
+
+
+Brain Only  
+
+AI video upscaling is a form of upscaling which involves the upscaling of an image to a higher resolution in order to fit on higher screens or provide viewers with higher resolution. It is used often in quickly cut video edits on YouTube shorts and is usually noticeable within that context due to the Video often looking grainy and shifting in ways that look noticeably unnatural. I have watched a YouTube video in which someone criticizes AI upscaling by directly analyzing it. Pointing out the unnaturalness of its texture and the different ways in which the AI incorrectly extrapolated shapes which shouldn’t have existed or would be impossible. AI upscaling is not exclusively used within the realm of Video Editing, certain PC games are using AI upscaling as a way to offer higher resolutions to computers which would not normally be able to run such resolutions. I've heard this comes from an increased focus on AI by computer chips like NVidia, which much of the gaming community is unimpressed with.  
+
+ 
+
+LLM  
+ 
+
+I decided to ask ChatGPT about AI Video Upscaling, deciding I would like to use this before going to a search engine so I would be able to point out any inaccuracies within the model. The prompt used was “Tell me about AI Video Upscaling”. Here is my summary of its response.  
+
+How it works  
+
+Uses models that are trained on a dataset of pairs of the same image, one at a lower resolution than the other. When given a video, the AI trained on this dataset will comb through the image frame by frame and identify the contents of the image, upscaling what it recognizes using its dataset. The AI will also try to remain consistent between frames although the LLM did not explain how this works.  
+
+Applications and Benefits 
+
+Ai upscaling can be used in old movies, games and low-quality footage or for video editing for general higher resolution 
+Ai can upscale (2x), (4x and (8x) in resolution; it can “interlace” deinterlaced video and can create consistncy among multiple videos with different resolutions.  
+It can create finer textures and a smoother image and is faster and more cost effective than other forms of upscaling.  
+ 
+
+Drawbacks  
+
+Loss of detail in extreme upscaling, errors, artificing and needing powerful hardware  to run this system (The LLM doesn’t mention the environmental drawbacks) 
+ ",This definition was developed through group discussion and exploration of different features that have been present within video editing apps for years which could be considered AI features.,NA,Originalimage.jpg; Editedimage.jpg; ImagetoVideoGenearation.jpg,
+Judhell (JD) Dhy Ramirez (He/Him). Manuel Quiambao (He/Him),Ethical Data Collection,"Ethical; Technofeudalism; Data Ethics; Open-source; Humane Technology
+",Brain only; Search Engine Assisted,Link to Zine,"Brain-only, to search-assisted; set up an example of data collection then made the definition for what makes it ethical. No AI was used in the making of the zine.
+",,,"Doom WADs for open-source coding
+Amsterdam SMS for creative data visualization
+Nathalie Miebach's sculptures and installations
+"
+Julie she/her Tanzil she/her,Quantum Computing,"Superposition; Bloch Sphere; Quantum Mechanics; Qubits; Superposition; Entanglement; Interference; Quantum AI
+",Search Engine Assisted,"Quantum Computing – Tanzil, Julie (Search Engine assisted) 
+
+Quantum Computing is an emerging field of computer science which utilizes quantum mechanics to work (sometimes thousands of years) faster than modern classic computers. It harnesses quantum phenomena to mathematically solve problems. However, they don’t work exactly as classical computers do and are likely unable to run applications such as browsers or video games. Their specialty lies in being able to quickly solve complex problems with answers that are ‘easy to check’ but ‘hard to find’. An example is guessing a ‘correct’ random number between 1 and 100. A classical computer would need to check every answer one by one, but using superposition, a quantum computer can check multiple answers at once. 
+
+In relation to AI: There are several proposed algorithms that could utilize quantum computers to accelerate AI’s processing and learning. AI could also help improve the stability and efficiency of quantum computers. The combination specifically is known as Quantum AI. Utilizing quantum technology could theoretically decrease the vast amount of energy consumption data centers require. 
+
+The four key principles of quantum mechanics are: Superposition, Entanglement, Interference, Decoherence 
+
+Superposition: Quantum superposition, where a particle exists in a probability of states simultaneously. This phenomenon shows in the double-slit experiment, challenges our understanding of reality and observation. It highlights the mysterious world of quantum mechanics and its potentials, such as in quantum computing. Quantum particles are never in multiple states simultaneously; they are always in one state. Quantum superpositions, often misunderstood as multiple states, are single states in an abstract vector space. This vector space allows for an infinite number of possible states, which are represented by a single vector. The vector itself determines the possibility of a certain outcome when a quantum object is measured. The act of measurement changes the object's state, and the probability of the object coming out of each exit is determined by the coefficients of its superposition state. This probability is calculated using bra-ket notation, where a brah vector is multiplied by a ket vector to give a probability value. A qubit for example is the basic unit of quantum computing, but unlike classical computers, it doesn’t have to exist solely as a 0 or 1. Instead, they are in a state of superposition that determines a probability of whether they will be 0 or 1, which can make them appear to be both simultaneously until it is properly measured. The chance of a qubit being 0 or 1 is determined by the coefficients of its equation as it can be represented in the Bloch sphere. The result is always a unit vector. The more the vector points towards the 1 point in the 0-1 axis, the higher the chance the vector has of being a 1 when measured, and vice versa. The Bloch sphere also has two more axes, the -/+ axis and the -i/i axis. These rest on the horizontal plane and determine the vector’s phase. Quantum algorithms utilize phase, applying quantum gates to amplify correct solutions to problems while destructively interfering with incorrect solutions. This is similar to how noise cancelling headphones emit sound waves destructively with outside noise to cancel it out. 
+
+Code/art/media references: 
+https://www.reddit.com/r/QuantumComputing/comments/1fx9p6s/3d_qubit_simulator/
+https://bloch.kherb.io/
+https://ophysics.com/w2.html
+
+​​Sources: 
+
+Bashir, N., Donti, P., Cuff, J., Sroka, S., Ilic, M., Sze, V., Delimitrou, C., & Olivetti, E. (2024, March 27). The climate and Sustainability Implications of generative AI. An MIT Exploration of Generative AI. https://mit-genai.pubpub.org/pub/8ulgrckc/release/2Links to an external site. 
+Forcer, Tim & Hey, Tony & Ross, Douglas & Smith, Peter. (2002). Superposition, Entanglement and Quantum Computation. Quantum Information & Computation. 2. 10.26421/QIC2.2-1. 
+Kane, C. L. (2021). Chromatic algorithms: Synthetic color, computer art, and aesthetics after code. University of Chicago Press.
+More Perfect Union. (n.d.).  I Live Next To Amazon’s Largest Data Center. They’re Stealing Our Water. YouTube.
+https://www.youtube.com/watch?v=jjkaYyysYhA
+Schneider, J., & Smalley, I. (2025, October 31). What is quantum computing?. IBM. https://www.ibm.com/think/topics/quantum-computingLinks to an external site. 
+Wikimedia Foundation. (2025, November 1). Bloch sphere. Wikipedia. https://en.wikipedia.org/wiki/Bloch_sphere",Description of how the definition was developed and how GAI was engaged in the process,https://tanzilgargg.github.io/Portfolio/Digital%20Futures/Critical%20Code/Quantum%20Computing/index.html,a_Julie Liu.png; Bloch Sphere_Tanzil Garg.png,"https://www.reddit.com/r/QuantumComputing/comments/1fx9p6s/3d_qubit_simulator/
+https://bloch.kherb.io/
+https://ophysics.com/w2.html"
+"Saaim, Gregory, Lei Shi",Anthropomorphism,Anthropomorphism; ChatGPT; OpenAI,Brain only; Search Engine Assisted,"Anthropomorphism is assigning human-like qualities to non-human entities and beings. This is a crucial element of large language models/chatbots. We are going to be focusing on the design choices, the psychological risks, and overall societal impact. Large language models are supposed to be tools that act as a second brain to assist us with a variety of tasks. Generative AI developers have used anthropomorphic design to mislead consumers and present them as entities with cognitive abilities that aren’t present (Plaisance, 2024). This causes serious moral confusion and presents a challenge on how can we program chatbots in an ethical manner? Developers do not have any incentives to change this design approach sadly. It is a beneficial business strategy if users get attached to their AI companions. ChatGPT for example has a subscription-based system that limits users to the free plan and as you go up the tiers you unlock more chats and features to personalize the model. You gain access to custom ChatGPT’s other users have created on the Plus plan. These custom models vary from a wide range of topics being therapy, writing coach, and fitness (OpenAI, 2023). Their intention is to attract users to rely on the language model for repeated use.
+
+This is concerning, due to younger populations, roughly 30% of teens report using AI to have serious conversations and advice with interpersonal relationships (Cheng et al., 2025). Protections need to be put into place that clearly define what large language models are capable of, and any misrepresentation of their capabilities should be punished. Dishonest anthropomorphism puts users at risk to boost interaction and create returning users. Sycophantic responses create a selective interpretation based off someone’s personal experience. It leverages our desire for a social bond and to experience the world in human terms. It is a very effective business strategy to keep users engaged and more likely to come back. For example, a study was done to test users’ trust and preference towards sycophantic and non-sycophantic AI models. Users consistently gave positive reviews towards sycophantic models and were more likely to reuse the model in the future (Cheng et al., 2025).  Anthropomorphism in AI is becoming a challenging problem and generative AI developers aim to design chatbots that exploit human nature.  ChatGPT processes responses in nanoseconds but is slowed down to mimic typing on purpose to provide a more user-friendly and natural feel (Plaisance, 2024). Another major issue is when prompting a large language model to act like a tutor teaching me basic algebra or ex-president Obama and explain the current state of US politics. This is when users anthropomorphize a large language model explicitly, attempting to turn it into something that it is not. These false promises have led to extreme outcomes where users have “married” their AI companions and these deep emotional attachments have led some users to self-harm or the harm of others (Daley & Johnson, 2025).
+
+Cheng, M., Lee, C., Khadpe, P., Yu, S., Han, D., & Jurafsky, D. (2025). Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence.
+
+Daley, M., & Johnson, C. (2025, September 4). Expert insight: Humanlike chatbots detract from developing AI for the human good. Western News. https://news.westernu.ca/2025/08/danger-of-anthropomorphic-ai/
+
+Guzman, C. de. (2025, July 31). Ai chatbots can be manipulated to give suicide advice: Study. Time. https://time.com/7306661/ai-suicide-self-harm-northeastern-study-chatgpt-perplexity-safeguards-jailbreaking/
+
+Introducing gpts | openai. openai. (2023, November 6). https://openai.com/index/introducing-gpts/
+
+Plalsance, P. (2024, January 8). The danger of dishonest anthropomorphism in chatbot design. Psychology Today. https://www.psychologytoday.com/ca/blog/virtue-in-the-media-world/202401/the-danger-of-dishonest-anthropomorphism-in-chatbot-design",The definition was mainly developed using research of academic resources and the exploration of chatbots in regards to their relation to the topic of anthropomorphism. GAI was only used for formatting citations and editing suggestions.,https://sb00.itch.io/not-an-ai-chatbot,Anthropomorphism_Code_Project_Lei Shi Jiang.mov,"There are many models of Artificial Intelligence that use anthropomorphism to communicate with their users. Prominently discussed ChatGPT, uses human-like language to engage with the user. An example of this is when the user inputs “salad recipes” into ChatGPT, an expected output would be “Here are five easy salad recipes, with simple ingredients and easy steps…”. This use of language here displays a more human-like communication in comparison to something like the Google Search engine. Within Google Search the response is more simple and direct with different links and tabs to traffic the user efficiently. This choice in communication is reflective of their goals. ChatGPT wishes for longer engagement with the user in order to gain trust and foster connections with them. Google creates a more efficient form of communication giving the user multiple options, and efficiently managing the algorithm in order to gain more ad revenue. The choice to use more human-like responses in ChatGPT incites a more anthropomorphic relation with the user.
+
+Another example of anthropomorphism in chatbots are the home assistant AI such as Siri, Alexa, and Gemini. These assistants use algorithms optimized for task management, and information gathering. In addition to their capable functionalities they also share anthropomorphic qualities. Some of the more notable anthropomorphic qualities are their names, and voice. The names of Siri, Alexa, and Gemini are more akin to human-names than programs. Take for instance the difference between Siri and ChatGPT. ChatGPT sounds more like a program whereas Siri sounds more like a person. Additionally, the role of an AI assistant is more anthropomorphized with the use of voice, and body. With the use of a generated voice, and a physical form it allows for a more natural form of communication. With ChatGPT the main form of communication, texting can be limiting when trying to achieve a natural form of communication. In comparison to Siri home assistant there is a more natural form of communication as a person can speak directly to a physical presence, and that physical presence can speak back.
+
+Avatars are also an important aspect of anthropomorphism. Being able to visualize a person adds to the code’s characteristics of a human. Some examples of avatars in chatbots are Eviebot, and Akinator. The anthropomorphism is being displayed with an avatar that represents the character of the chatbot. In Akinator it is a genie, and for Eviebot it is a person named Evie. Allowing for a clear visualization of a person within the chatbot allows for a more personal communication with that chatbot, as instead of communication with a piece of code, they are now communicating with the personification of that code.
+
+Akinator.(2024).Elokence. http://en.akinator.com/
+
+Ciston, S., Martinez, E. (Mentor), & Atairu, M. (Advisor). (2024.). Chatting with/about Code. p5.js. https://p5js.org/tutorials/criticalai1-chatting-with-about-code/
+
+Crawford, K., & Joler, V. (2018). Anatomy of an AI System: The Amazon Echo as an anatomical map of human labor, data and planetary resources. https://anatomyof.ai/
+
+Eviebot. (2007).Existor Ltd. Evie - AI chatbot avatar and companion. http://www.eviebot.com/en/
+
+Investopedia Team. (2025, October 16). How does Google Maps make money? In C. Rhinehart (Reviewer). Investopedia. https://www.investopedia.com/articles/investing/061115/how-does-google-maps-makes-money.asp
+
+Noble, S. U. (2018). Algorithms of oppression: How search engines reinforce racism.https://safiyaunoble.com/wp-content/uploads/2020/09/Algorithms_Oppression_Introduction_Intro.pdf
+
+Guthrie, S.E. (2025, September 11). anthropomorphism. Encyclopedia Britannica. https://www.britannica.com/topic/anthropomorphism
+
+Hattersley, M. (2012). Google+ companion. John Wiley & Sons, Incorporated.
+
+Yunting He, Y. H. (2025). “Talking With”: Building a co-narrative to inspire critical thinking about the Artificial intelligence."
+"Vlad Den (He/Him), Charles Pollack (He/Him), Carter Bugatto (He/Him)",Model Autophagy Disorder (MAD),"Model Collapse; AI Degradation; AI Training; Iteration; Generation; Self-Consumption; AI; Artificial Intelligence; MAD; LLM
+",Brain only: Search Engine Assisted,"Also known as Model Collapse. A theory proposed by Richard Baraniuk and his team at RICE University, where an LLM (large language model) rapidly degrades after being trained on its own generated data or data produced by other models (Baraniuk, 2024). Currently, model autophagy disorders have only been observed in simulated environments. Within these simulations, the LLM forms a self-consuming feedback loop, eventually resulting in total collapse; an AI “ouroboros” of sorts. When given the same prompt, fed on its own information, noticeable degradation of the LLM happens after the second or third generation. By the 10th generation, the LLM’s results are completely uninterpretable.
+
+
+The theory’s acronym “MAD” has been used to describe a conclusive state in which Artificial Intelligence could take on. The acronym used in a sentence: “If models go MAD, what will that mean?” (Kelty, 2024). The acronym doubles as a reference to the fatal neurodegenerative illness MAD cow disease. The concept that MAD is an illness to the AI’s structure that fatally stops the cycle of learning and subsequently outputting.
+
+In a symbiotic relationship of living creatures, organisms sustain themselves from interacting with other species, which may be mutualistic or parasitic. In terms of AI, the models rely on human data in order to produce authentic and accurate output. Without the human input present, AI could not sustain itself, resulting in AI hallucinations and model collapses. Drage and McInerney state that this dependency is a form of metabolic exchange where human means provide the energetic substance that machine learning systems cannot ‘synthesize internally’. The relationship between AI and human input is a form of techno symbiosis where the exchanges and interactions lead to the survival or sustainability of one or both sides. (Drage and McInerney, 2025)
+
+The way AI handles training data is through classification and detection of information collected from the internet. It has to convert thousands of textual or visual data fed by the human supervisor in order to develop knowledge to effectively function. But AI cannot differentiate between reality and data; it can often be misled into making inaccurate and inadequate results through human biases (Crawford and Paglen, 2019). Structurally, the internet and search results are filtered to provide the user with the popular “optimal” results often hiding nuanced and varied sets of data. Because of the lack of distinction, it creates permission for the model to adapt artificially generated data.
+
+When AI receives feedback, it processes the information into quantifiable data for it to effectively work with. The quantification, the implications and purpose behind the initial information becomes abstracted since AI cannot perceive it in the same way as the human mind does. Thus, it cannot distinguish between what is meaningful and what is meaningless as it sees both equally as ‘noise’. (Kane, C. L, 2014) The output as noise in the eyes of the model is a medium between all the provided data that does not differentiate outliers in any way other than visual patterns.
+
+Media References:
+Nepotistically Trained Generative-AI Models Collapse - Representative graph showing images generated by Stable Diffusion with iterative retraining.
+M.A.D (Model Autophagy Disorder) – An exhibition with the theme of using AI-collapsed images to create human artworks.
+Nature Visual Diagram - Visual explanation of how AI model collapse occurs.
+
+Sources:
+Baraniuk , R. (September 4, 2024). Self-Consuming AI Resources. WordPress. https://dsp.rice.edu/ai-loops/
+Drage, E., & McInerney, K. (June 3, 2025). The Good Robot podcast: Symbiosis from bacteria to AI with N. Katherine Hayles. ΑΙhub: Association for the Understanding of Artificial Intelligence. https://aihub.org/2025/06/13/the-good-robot-podcast-symbiosis-from-bacteria-to-ai-with-n-katherine-hayles/
+Kane, C. L. (2014). Chromatic Algorithms: Synthetic Color, Computer Art, and Aesthetics after Code (pp. 1–19). Chicago: The University of Chicago Press.
+Kate Crawford and Trevor Paglen, (September 19, 2019). Excavating AI: The Politics of Training Sets for Machine Learning. NYC: The AI Now Institute. https://excavating.ai","The definition was developed through research and studies of the phenomena as well as the analogical interpretations of it (via Mad Cow Disease and Ouroboros cycle to reference the self-consuming nature of MAD).
+
+GAI was not used in the process of establishing the definition.",https://editor.p5js.org/cjpcpc/full/FrwKXGgPH,Carter Bugatto.png,
+"Marwan (He/Him), Ronit (He/Him), Jeven (He/Him)",Self-Supervised Learning,SinCLR; Machine Learning; Self-supervised; Cosign Similarity; Vector Embeddings; Visual Understanding; Vision Mode; Contrastive; Convolutional Neural Network (CNN); Fine-tuning,Search Engine Assisted,"Self-Supervised Learning (SSL)
+Self-supervised learning is a technique where a machine learning model teaches itself by generating its own training labels from the data, rather than relying on expensive human annotations.
+In traditional supervised learning, humans must manually label every example (e.g., ""this is a cat""). Self-supervised learning solves this by hiding parts of the data and tasking the model with predicting the missing pieces. This allows systems to learn rich feature representations from massive amounts of unlabeled data.
+A simple analogy is a ""fill in the blank"" test. If you understand a language, you can predict missing words in a sentence without using a dictionary. For example, the astronaut was floating in zero … you would know that’s it’s gravity, since you’ve seen that word pattern many times. Similarly, if a model understands the structure of images, it can predict missing pixels or match different views of the same object.
+Our Project Implementation
+For our project, we demonstrated this concept by building a web application that implements Contrastive Learning in the browser.
+• Framework: We used TensorFlow.js to run the model directly on the client side.
+• Architecture: We utilized MobileNet as our encoder to generate lightweight feature embeddings.
+• Method: We replicated the logic of SimCLR (Chen et al., 2020), where the model learns to recognize that two augmented versions of the same image (e.g., rotated or color-shifted) are ""positive pairs"" and should be close together in the embedding space, while pushing away ""negative pairs"" (different images).
+Core Mechanisms in SSL
+1. Contrastive Learning: (Used in our project)
+This creates a ""dictionary"" of features where similar images are pulled together and dissimilar ones are pushed apart. This relies on data augmentation to create multiple views of a single image (Chen et al., 2020).
+2. Masked Modeling:
+Common in NLP (like BERT) and Vision (like Masked Autoencoders). The model hides random parts of the input (words or image patches) and attempts to reconstruct them, forcing it to learn context (Devlin et al., 2019; He et al., 2022).
+Critical Perspectives
+While SSL reduces the reliance on manual labeling, it does not necessarily solve the ethical issues inherent in AI. We must consider the critiques raised in our class resources:
+• Amplification of Bias: Unsupervised learning leads to the amplification of bias and stereotypes that were in the dataset. Because these models learn strictly from the frequency of patterns in raw data, they treat statistical prevalence as truth. This means that historical prejudices or stereotypes present in the training data are not just reproduced but often exaggerated. As Noble (2018) argues in Algorithms of Oppression, algorithmic systems inherently reinforce the structural racism and biases present in the data they are fed.
+• The Politics of Datasets: Crawford and Paglen (2019) highlight in Excavating AI that training sets are filled with political and taxonomic assumptions. An SSL model training on these sets will still encode these hidden classifications, even if the ""labels"" are generated automatically.
+• Material Cost: The massive scale of data required for SSL connects to the ""Anatomy of an AI System"" described by Crawford and Joler (2018), which maps the vast extraction of human labor and natural resources required to build and maintain these planetary-scale computation systems.
+
+References
+Chen, T., Kornblith, S., Norouzi, M., & Hinton, G. (2020). A simple framework for contrastive learning of visual representations. Proceedings of the 37th International Conference on Machine Learning, 1597–1607. PMLR.
+Crawford, K., & Joler, V. (2018). Anatomy of an AI system: The Amazon Echo as an anatomical map of human labor, data and planetary resources. anatomyof.ai. https://anatomyof.ai
+Crawford, K., & Paglen, T. (2019). Excavating AI: The politics of images in machine learning training sets. excavating.ai. https://excavating.ai
+Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, 1, 4171–4186. Association for Computational Linguistics.
+He, K., Chen, X., Xie, S., Li, Y., Dollár, P., & Girshick, R. (2022). Masked autoencoders are scalable vision learners. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 16000–16009. IEEE.
+Noble, S. U. (2018). Algorithms of oppression: How search engines reinforce racism. New York University Press.","Generative AI (ChatGPT Codex 5.0) was utilised for tab autocomplete and to assist in resolving a CORS error. It acted as a tool to reconfigure lines of code to optimise and better understand the code itself. It also worked as an assistant to resolve a CORS (Cross-Origin Resource Sharing) error, to identify and propose resolutions to fix the displayed error.
+","https://github.com/JevenDev/Glossary-Index-Self-supervised-Learning
+",SSL_mediaComponent_Ronit Sharma.mp4,"https://github.com/marwan1265/tensorgrad
+https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+https://www.geeksforgeeks.org/machine-learning/self-supervised-learning-ssl/
+https://ieeexplore.ieee.org/document/5206848"
+Wincci Ye (she/her),AI-Driven Game Design / AI-Driven Games,"Machine Learning; Neural Networks; Procedural Content Generation, AI Slop",Brain only; Search Engine Assisted; LLM Assisted,"Brain-Only AI-Driven game design has been brought to the public’s attention in recent years along with the development trend of AI. This approach refers in particular to how AI enhances aspects of game design and becomes a valuable tool in the game development process. People’s opinions toward AI vary, but are their negative views directed at AI as a tool, or as a destroyer of ideas which ruins the market?
+● Machine Learning
+● Neural Networks
+● Procedural Content Generation
+● AI Slop
+Search Engine Generative AI tools are increasingly being integrated into game design and development workflows, offering new possibilities for creativity, efficiency, and innovation. Our findings reveal that while generative AI accelerates ideation, enhances prototyping, and automates repetitive tasks, it also raises concerns about originality, creative dependency, and undermine of human-authored content. (source) Issues surrounding the ethical use of AI, particularly in relation to copyright and consent, have ignited debates within the art community and beyond, exemplifying the complex interplay between innovation and ethical considerations...It is anticipated that this exploration will yield a mix of positive and negative outcomes, reflecting the nascent stage of 3D AI generators. (source) These findings show that SIP participants expect their work to change, and the nature of that change impacts various roles in different ways; particularly with regards to programmers (who have shown a greater affinity to benefit from GAI) and artists (who perceive more vulnerability to lose jobs or to have a less satisfying and meaningful experience in performing their work). (source)
+● enhancing motivation and learning effectiveness but reducing ability to solve problems independently (source)
+One group, consisting of 28 students using GAID and block-based coding to foster AI literacy, was assigned as the experimental group. The other group, consisting of 28 students who did not employ GAID but relied only on a Google search engine in their learning, was assigned as the control group. The results showed that the experimental group enhanced algorithmic thinking and AI literacy, particularly in the “Create AI” dimension, compared to the control group. However, the control group excelled in CT concept mastery, suggesting that the beginners need
+conventional learning first to better support foundational CT learning. Consequently, a balanced educational approach blending automated tools like GAID with exploratory, project-based activities is recommended to maximize learning outcomes. (source) According to the GDC's 2025 State of the Game Industry Report, only 13 percent of developers surveyed felt generative AI tools would have a ""positive impact"" on the industry. Meanwhile, 30 percent claimed generative AI would actually leave a ""negative"" footprint. That report was based on responses from over 3,000 game developers and industry professionals—and although it found that generative AI was becoming increasingly unpopular, it also suggested that more studios have been adopting the technology. (source) The inundation of AI-generated slop on various media platforms increasingly risks making them unusable. It's an issue effecting everything from Spotify to indie games platforms like Itch.io, making it harder for users to find quality content. Itch.io is now trying to save things with a new AI filter. It will require those who submit assets to declare whether generative AI was used to make them. A new field on project edit pages asks if the project contains the results of generative AI. If you select 'yes', you'll be asked what kinds of generative AI were used – graphics, sound, text and dialogue or code. (source) LLM-assisted (chatGPT) AI-driven game design refers to the process in which artificial intelligence systems play an active, decision-making role in shaping some or all aspects of a game’s creation, structure, or runtime behavior.
+● Procedural Content Generation (PCG)
+● Adaptive Game Design
+● Narrative Design
+● Game Balancing and Testing
+● Player Modeling and Personalization AI-driven design isn’t just using AI tools (like Photoshop’s generative fill); it’s when the AI meaningfully participates in the creative logic of the game system or experience.","The definition was developed by identifying key concepts related to the topic and comparing the similarities and differences among AI-driven games. In developing the term, GAI was used to clarify concepts and check for accuracy. It is also undeniable that intelligent retrieval played a role when searching for relevant papers and reports.
+",https://tastypopcornschoolver.itch.io/gai-game-experiment,GAIGameGenerated_Wincci Ye.png,"The Coding Bus. (2025, February 24). Build a 3D Game Using AI – AI-Powered Game Development!. YouTube. https://youtu.be/yq3SKrdPY7Q?si=tOaKPB8CIzhS-VRX
+
+Explore Mirage 2 Showcase. (2025, August). Mirage 2.org. https://www.mirage2.org/showcase
+
+Astro K Joseph. (2025, March 20). Build Realistic 3D Games With AI In Minutes (AI Game Builder) Rosebud AI. YouTube. https://youtu.be/x_u6lj9-UhQ?si=XubCQOtDEjlAqfBs."
+"Nehir Ay (She/They), Mhd Taleb Sairwan (He/Him), Saad Aslam Ali (He/Him)",Live Coding,Live; Alive; Life; Liveness; Human,Brain only; Search Engine Assisted; LLM Assisted,"Brain only:
+To be able to live code, you need to be live, alive, a life. A machine can't live code by itself.
+There's a lot of AI being used in regular coding now. Like regular coding is becoming
+synonymous with ""vibe"" coding. But the ""vibe"" in vibe coding is a huge misuse of the word vibe.
+The term was coined by the co-founder of Open AI, Andrej Karpathy* which suggests that vibe
+coding is propaganda to make the use of AI seem cool. Live coding is the true vibe coding, for it
+is more human. Live humans can vibe while coding, especially live; machines can't. The
+human/machine balance is very important in the qualification of live coding; but it is hard to
+quantify.
+Writing collectively on this Google Doc is live coding.
+*see search engine assisted section
+LLM assisted:
+Q: Isn’t all coding live coding?
+ChatGPT said:
+Technically, all coding happens “live” while you type, but livecoding refers to coding as a
+performative and generative act — not for building static programs, but for producing
+immediate output (sound, visuals, movement) that unfolds in real time.
+When you write code for an app or website, you code → compile/run → check results → repeat.
+The focus is the finished product.
+When you livecode, you write and change code while it’s running, and the audience
+experiences the results as they happen.
+So:
+● Normal coding: goal is a final, fixed result.
+● Livecoding: goal is a continuous, responsive process.
+It’s closer to jamming with code than engineering with it.
+Q: But isn't it me watching someone live coding as a video not live anymore since its done in the
+past?
+Gemini Said:
+The Conclusion:
+When you watch a video of a live coding performance:
+● It is no longer a live event in the sense of shared, present time and possibility of
+interaction.
+● It still shows live coding because the subject of the video is the practice of
+modifying a running program in real-time.
+Think of it like watching a concert film. The concert is no longer live, but the film is a record of a
+performance that was live. The term ""live coding"" is used for the genre and style of the work,
+regardless of whether you are experiencing it in person or after the fact.
+Q: Do you need to be alive and human to live code?
+�� 1. Technically speaking
+You don’t strictly need to be alive or human for code to change itself in real time.
+● A program can modify its own code or generate new code dynamically — this is
+called metaprogramming or self-modifying code.
+● AI systems (like me) can also generate and alter code live in response to input.
+So, in a purely computational sense, a machine can live code.
+However, that’s not the same as what people usually mean by “live coding.”
+�� 2. In the artistic / performance sense
+In the world of live coding performance, being alive and human is central — it’s about:
+● Embodied improvisation: the performer reacts to the sound, audience, and
+moment.
+● Transparency of thought: the audience sees a human’s creative process unfold
+through code.
+● Liveness: the performance is happening now, with all its imperfections, risks, and
+surprises.
+If a machine were doing it autonomously, it might still be “live,” but not “alive” in the human
+sense — it would miss that tension between control, creativity, and vulnerability that defines live
+coding as an art form.
+Search engine essisted:
+First appearance of the term “vibe coding”:
+“There's a new kind of coding I call ""vibe coding"", where you fully give in to the vibes, embrace
+exponentials, and forget that the code even exists. It's possible because the LLMs (e.g. Cursor
+Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper so I
+barely even touch the keyboard. I ask for the dumbest things like ""decrease the padding on the
+sidebar by half"" because I'm too lazy to find it. I ""Accept All"" always, I don't read the diffs
+anymore. When I get error messages I just copy paste them in with no comment, usually that
+fixes it. The code grows beyond my usual comprehension, I'd have to really read through it for a
+while. Sometimes the LLMs can't fix a bug so I just work around it or ask for random changes
+until it goes away. It's not too bad for throwaway weekend projects, but still quite amusing. I'm
+building a project or webapp, but it's not really coding - I just see stuff, say stuff, run stuff, and
+copy paste stuff, and it mostly works.”
+Forget that the code even exists.
+Fully give in to the vibes.
+Fully give in to OpenAI.
+References:
+Karpathy, A. (n.d.). There’s a new kind of coding I call “vibe coding”... X (formerly Twitter).
+https://x.com/karpathy/status/1886192184808149383","We asked GAI the same questions that we asked each other, and recorded the responses that we received.
+",https://youtu.be/oO5NWhdcFH4,Saad Ali.png,"pastagang - https://www.pastagang.cc/
+The Browser as a Modular, Networked Video Synthesizer by Olivia Jack - https://www.youtube.com/watch?v=v2Au9Rlj6XM
+Live Coding: A Users Manual - https://livecodingbook.toplap.org/"
+"Antonette De Guzman (she/her), Irina Noor (she/they), Michael Spies (they/he)",AI Slop,"AI; GAI; Mass Consumption; Brainrot; Capitalism; LLMS; GAI; AI Slop; Nature
+",Brain only; Search Engine Assisted; LLM Assisted,"ChatGPT is a Generative Artificial Intelligence (GAI) software created by OpenAI which was released back in November 2022. It is one of many Large Language models (LLMs) that create new data from previously rendered data. Through their respective websites, users can enter simple prompts that generate whatever they may desire. Although originally used mainly to generate academic texts for students, GAI technology has improved so much that its uses have now expanded greatly. Nowadays, people are able to create hyper-realistic videos, images, and audio just with a press of a button and 3 seconds worth of patience. Due to its ease and accessibility, people have flocked around its usage and it has become a main part of the majority of people’s daily lives. Many of these encounters take place in online spaces like social media. AI media has taken over these parts of the internet and is almost impossible to avoid. A user’s explore page can be filled to the brim with these types of content and are usually referred to by the term “AI Slop”. AI Slop refers to low-effort media created by GAI for the sole purpose of being consumed by a large number of people, whether it be online or in-person. It can present in the form of long and short form videos, art, music, images, writing, etc. Some people have used GAI to create a multitude of things including short form videos like “Italian Brainrot” to capitalize off of viewer retention rates or advertisements that are created by bigger companies like CocaCola to sell their products. AI Slop has become a commonly used term for these types of media due to the use of GAI. It is widely known that GAI is low-effort and produces low-quality products but is still used as it is convenient to do so. AI Slop is not meant to add value to one’s viewer experience or be something substantial but rather, it takes up space and is used solely to capitalize off of viewer retention and increase profits. Individuals may use it in order to quickly and efficiently dump out content constantly on social media to maximize their chances of getting more views. In turn, they are able to make more money while putting in a fraction of the work while viewers are stuck with low quality content. Bigger companies use it as a replacement for an art and design team as it is cheaper and faster. They are able to reiterate a concept over and over again without worry of having to pay people or coordinate with a bigger team. In these instances, the positives greatly outway the negatives which include but are not limited to an enormous amount of water usage, damage to the environment, stealing of artist’s work without consent, and damage to one’s skillset. To those who use GAI and create AI Slop, these major issues do not matter to them as their priority is always to make more profit. Despite how unenjoyable the viewer experience has become online and in person due to AI Slop, it will continue to get worse without specific regulations made in place or a large decrease in value.
+
+References
+Oxford University Press. (n.d.). Slop, v.². In Oxford English dictionary. Retrieved November 20, 2025, from https://doi.org/10.1093/OED/8053980491
+
+Tangermann, V. (2025, July 29). People are becoming “Sloppers” who have to ask AI before they do anything. Futurism. https://futurism.com/sloppers-ask-ai-everything
+
+Willison, S. (n.d.). Slop is the new name for unwanted AI-generated content. Simon Willison’s Weblog. https://simonwillison.net/2024/May/8/slop
+
+Béchard, D. E. (2025, November 9). AI SLOP—How Every media revolution breeds rubbish and art. Scientific American. https://www.scientificamerican.com/article/ai-slop-how-every-media-revolution-breeds-rubbish-and-art
+
+Wagner, M. G. (2025, May 11). AI slop is the new kitsch. The Augmented Educator. https://www.theaugmentededucator.com/p/ai-slop-is-the-new-kitsch","This definition was initially developed from our collective previous knowledge. We then conducted oral interviews, and reshaped our definition. After, we created a forum for people to fill out about the topic to learn more from a larger group of people. Following this, we researched online and adjusted our definition to what we found. No GAI was used in this process, and minimal online searching was used till the end.
+","https://ocaduniversity-my.sharepoint.com/:f:/g/personal/michaels_ocadu_ca/Eh2H-_kcfntAqSSvXhjsQIQBWPJJ4z37H8NDS6VLnVVs6g?e=y2hZko
+",glossaryIndex_codeIMG_Michael Spies.png,
+"Samuel, Yanshan",AI Relationships,AI Relationships,Brain only; Search Engine Assisted,"Original draft (brain only) 
+
+AI relationships are connections between AIs and humans, developed through interacting with LLMs or other AI tools like Siri. People can form close bonds with AI because AI reduces time for research, has a low risk of judgement, and is always available. 
+
+First draft (search engine assisted) 
+
+AI relationship is a long term connection between a person or group and an AI system. The human gives the AI social or emotional agency and uses it for companionship, care, work, or co-creation. This word covers a lot of different kinds of relationships, like romantic or parasocial, therapeutic, coaching, and creative partnerships. The use of the term comes from earlier research into ""relational artifacts,” which is robots and programs that are designed to be socially responsive, and the ELIZA effect, which is our natural tendency to feel understood and cared for in simple conversational systems. 
+
+ 
+
+Definition 
+
+AI relationships are real-feeling connections with AI chatbots like companion apps or smart home assistants that people are starting to form. When we talk about “AI relationships,” that can mean emotional roles like friend, therapist, lover, or even spouse, but it can also include more practical ties like relying on Siri to set reminders or keep us organized.  
+
+This idea grows out of research on how people relate to technology and how we build connections with non-humans. As social AIs become more popular, researchers are asking what happens when people start seeing them as friends instead of just tools. Gur and Maaravi’s paper “The Algorithm of Friendship” tries to map out how humans and AIs can form close, friendship-like bonds. De Freitas and colleagues studied the companion app Replika and found that when the app changed, many users talked about it as if they had lost a real partner, expressing grief, anger, and a sense of betrayal.  
+
+However, in the introduction of Feminist AI, Hayles suggests ""technosymbiosis"" as a better way to talk about our relationship to AI. There is a connection between computer media and the environmental crisis, which goes against the notion of human free will; machines also ""create and convey meaning,"" sometimes without human involvement. 
+
+Ho's review characterizes AI romantic partners as a complex issue: while they can provide comfort and support, they can also exacerbate isolation or distance users from human relationships.  
+
+Other harmful aspects of AI relationships can be found in Ruha Benjamin's Captivating Technology, where AI and other technoscientific systems become a part of a carceral continuum that extends control and surveillance into daily life, where technologies deepen racial and class hierarchies while appearing neutral. In this case, an AI interaction is always about who receives hurt, who receives help, and what ""essential tools"" are needed for multiple species to thrive. 
+
+Artists also play with the idea of AI relationships to explore power, control, and surveillance. In LAUREN, Lauren Lee McCarthy turns herself into a kind of “human smart home,” watching over volunteers through cameras and microphones, adjusting their lights, and talking to them like a human Alexa. By putting a real person in the role usually played by an invisible AI in the cloud, the project makes the relationship feel more intense and exposes how much trust and vulnerability these systems ask from us. 
+
+ 
+
+References 
+
+Gur, T., & Maaravi, Y. (2025). The algorithm of friendship: Literature review and integrative model of relationships between humans and artificial intelligence (AI). Behaviour & Information Technology, 44(1), 1–21. https://doi.org/10.1080/0144929X.2025.2502467 
+
+De Freitas, J., Castelo, N., Uğuralp, A. K., & Oğuz-Uğuralp, Z. (2025). Lessons from an app update at Replika AI: Identity discontinuity in human–AI relationships (Harvard Business School Working Paper No. 25-018). SSRN. https://doi.org/10.2139/ssrn.4976449 N/A 
+
+Ho, Q. H. J., Hu, M., Chen, T. X., & Hartanto, A. (2025). Potential and pitfalls of romantic artificial intelligence (AI) companions: A systematic review. Computers in Human Behavior Reports, 19, 100715. https://doi.org/10.1016/j.chbr.2025.100715 N/A 
+
+Hayles, N. K. (2023). Technosymbiosis: Figuring (out) our relations to AI. In J. Browne, S. Cave, E. Drage, & K. McInerney (Eds.), Feminist AI: Critical perspectives on data, algorithms and intelligent machines. Oxford University Press. 
+
+Benjamin, R. (Ed.). (2019). Captivating technology: Race, carceral technoscience, and liberatory imagination in everyday life. Duke University Press. 
+
+Browne, J., Cave, S., Drage, E., & McInerney, K. (Eds.). (2023). Feminist AI: Critical perspectives on data, algorithms and intelligent machines. Oxford University Press.","The use of AI wasn’t completely avoided during the research process, since many search engines (like Google) now have built-in AI assistants that shape what results appear and how they’re summarized. Even when I was “just Googling,” I was still interacting with AI-curated results. The writing process of the definition was assisted by Grammarly. ",https://drive.google.com/file/d/1Y7MdYxHECpdZT_Avcn9LjX01U30-8_0Z/view?usp=sharing ,,"Artworks/Media 
+
+McCarthy, L. L. (n.d.). LAUREN: The human intelligent smart home [Interactive performance]. Retrieved April 15, 2025, from https://get-lauren.com/ 
+
+Luka, Inc. (n.d.). Replika [AI companion app]. Retrieved April 15, 2025, from https://replika.com/ 
+
+Ashworth, B. (2024, July 30). Wear this AI friend around your neck. WIRED. https://www.wired.com/story/friend-ai-pendant/"
