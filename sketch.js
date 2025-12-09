@@ -389,16 +389,16 @@ function renderDetails(data) {
     if (hasContent(definitionContent)) {
         let htmlContent = '';
         
-        // Regex to match anything ending in .pdf, including filenames without http/s
-        if (definitionContent.toLowerCase().match(/\.pdf\b/)) {
+        // --- NEW PDF CHECK LOGIC ---
+        const lowerDef = definitionContent.toLowerCase();
+        const isPdfFile = lowerDef.endsWith('.pdf');
+        const isExternalUrl = lowerDef.startsWith('http');
+        
+        if (isPdfFile && !isExternalUrl) {
+            // Case 1: Local PDF filename found (Embed PDF)
             
-            let pdfLink = definitionContent;
-            // If the link does NOT start with http, assume it's local (in /media/)
-            if (!pdfLink.startsWith('http')) {
-                pdfLink = "media/" + pdfLink;
-            }
+            let pdfLink = "media/" + definitionContent; // Prepend media/ since it's local filename
             
-            // It's a PDF URL: embed it
             htmlContent = `
                 <div style="height: 500px; border: 1px solid #ccc;">
                     <iframe src="${pdfLink}" width="100%" height="100%" style="border: none;"></iframe>
@@ -406,8 +406,12 @@ function renderDetails(data) {
                 <p class="meta-text" style="margin-top: 10px;">Definition embedded as PDF: <a href="${pdfLink}" target="_blank">Download PDF ↗</a></p>
             `;
         } else {
-            // Standard text definition: format paragraphs
-            htmlContent = formatText(definitionContent);
+            // Case 2: Standard text OR external PDF URL (Format as text/links)
+            
+            // First, format paragraphs from newlines
+            let formattedParagraphs = formatText(definitionContent);
+            // Then, apply linking to the paragraphs (which catches external PDF citation links)
+            htmlContent = linkify(formattedParagraphs);
         }
         addCard('DEFINITION', htmlContent);
     }
