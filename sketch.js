@@ -338,11 +338,19 @@ function renderDetails(data) {
         if (codeData.url && isEmbeddable(codeData.url)) {
             codeOut.style.display = 'flex';
             codeFallbackArea.style.display = 'none';
-            if(codeData.url.match(/\.(jpeg|jpg|gif|png)$/i)) {
-                codeOut.innerHTML = `<img src="${codeData.url}">`;
+            
+            // --- Code Component Error Handling START ---
+            let embedHtml = '';
+            let url = codeData.url;
+            
+            if(url.match(/\.(jpeg|jpg|gif|png)$/i)) {
+                 embedHtml = `<img src="${url}" onerror="this.outerHTML='<div class=\\'waiting-text\\' style=\\'color:red;\\'>ERROR: Code Image not found at ${url}<br>Check media folder case/path.</div>'">`;
             } else {
-                codeOut.innerHTML = `<iframe src="${codeData.url}" title="Code"></iframe>`;
+                 embedHtml = `<iframe src="${url}" title="Code Component" onerror="this.outerHTML='<div class=\\'waiting-text\\' style=\\'color:red;\\'>ERROR: IFrame failed to load ${url}<br>Check URL or try external link.</div>'"></iframe>`;
             }
+            codeOut.innerHTML = embedHtml;
+            // --- Code Component Error Handling END ---
+
         } else if (codeData.url) {
             codeOut.style.display = 'none';
             codeFallbackArea.style.display = 'flex';
@@ -396,21 +404,19 @@ function renderDetails(data) {
         
         if (isPdfFile && !isExternalUrl) {
             // Case 1: Local PDF filename found (Embed PDF)
-            
             let pdfLink = "media/" + definitionContent; // Prepend media/ since it's local filename
             
             htmlContent = `
                 <div style="height: 500px; border: 1px solid #ccc;">
-                    <iframe src="${pdfLink}" width="100%" height="100%" style="border: none;"></iframe>
+                    <iframe src="${pdfLink}" width="100%" height="100%" style="border: none;" 
+                        onerror="this.outerHTML='<div class=\\'waiting-text\\' style=\\'color:red;\\'>ERROR: Local PDF not found at ${pdfLink}<br>Check media folder case/path.</div>'"></iframe>
                 </div>
                 <p class="meta-text" style="margin-top: 10px;">Definition embedded as PDF: <a href="${pdfLink}" target="_blank">Download PDF ↗</a></p>
             `;
         } else {
             // Case 2: Standard text OR external PDF URL (Format as text/links)
             
-            // First, format paragraphs from newlines
             let formattedParagraphs = formatText(definitionContent);
-            // Then, apply linking to the paragraphs (which catches external PDF citation links)
             htmlContent = linkify(formattedParagraphs);
         }
         addCard('DEFINITION', htmlContent);
@@ -438,14 +444,18 @@ function renderDetails(data) {
                 src = "media/" + mediaFile;
             }
 
+            // --- Media Asset Error Handling START ---
+            let mediaErrorHtml = `'<div class=\\'waiting-text\\' style=\\'color:red;\\'>ERROR: Media file not found at ${src}<br>Check media folder case/path.</div>'`;
+            
             combinedHtml += `<div class="media-item" style="margin-bottom: 20px;">`;
             
             if (mediaFile.match(/\.(mp4|webm|mov)$/i)) {
-                 combinedHtml += `<video controls style="width:100%"><source src="${src}"></video>`;
+                 combinedHtml += `<video controls style="width:100%"><source src="${src}" onerror="this.outerHTML=${mediaErrorHtml}"></video>`;
             } else {
-                 combinedHtml += `<img src="${src}" style="width:100%; border: 1px solid var(--ink); display:block;">`;
+                 combinedHtml += `<img src="${src}" style="width:100%; border: 1px solid var(--ink); display:block;" onerror="this.outerHTML=${mediaErrorHtml}">`;
             }
             combinedHtml += `</div>`;
+            // --- Media Asset Error Handling END ---
         });
         
         addCard('PROJECT MEDIA', `<div class="media-box">${combinedHtml}</div>`);
