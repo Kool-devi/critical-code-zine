@@ -10,6 +10,7 @@ let displayTerm, displayTags, detailScroll, dirList;
 
 // --- PASSWORD LOGIC ---
 const PASSKEY = "critical2025"; // <--- CHANGE THIS PASSWORD IF YOU WANT
+const TOKEN_KEY = "zine_access_granted"; // Key for local storage
 
 function checkPassword() {
     const input = document.getElementById('pass-input');
@@ -17,9 +18,9 @@ function checkPassword() {
     const error = document.getElementById('error-msg');
     
     if (input.value === PASSKEY) {
-        // Correct Password: Initialize the app
+        // Correct Password: Store token and initialize
+        localStorage.setItem(TOKEN_KEY, 'true'); 
         overlay.style.display = 'none';
-        // Start the application setup
         initializeApp();
     } else {
         // Wrong Password
@@ -79,21 +80,31 @@ function initializeApp() {
     });
 }
 
-// P5.js setup function creates the canvas but hides it
+// P5.js setup function creates the canvas but handles the access gate
 function setup() {
-    // 0. Setup Password Listener
-    document.getElementById('login-btn').addEventListener('click', checkPassword);
-    
-    // Allow pressing "Enter" key to submit
-    document.getElementById('pass-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-          checkPassword();
-        }
-    });
     
     // Create canvas once, but make it invisible/tiny until initialized.
-    // The parent assignment is done in initializeApp()
     createCanvas(1, 1).hide(); 
+    
+    // --- Access Check Start ---
+    const overlay = document.getElementById('login-overlay');
+    
+    if (localStorage.getItem(TOKEN_KEY) === 'true') {
+        // Token found: Hide overlay and initialize app immediately
+        overlay.style.display = 'none';
+        initializeApp();
+    } else {
+        // Token not found: Show overlay and wait for password
+        overlay.style.display = 'flex';
+        document.getElementById('login-btn').addEventListener('click', checkPassword);
+        
+        document.getElementById('pass-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+              checkPassword();
+            }
+        });
+    }
+    // --- Access Check End ---
 }
 
 function draw() {
@@ -455,7 +466,6 @@ function renderDetails(data) {
                  combinedHtml += `<img src="${src}" style="width:100%; border: 1px solid var(--ink); display:block;" onerror="this.outerHTML=${mediaErrorHtml}">`;
             }
             combinedHtml += `</div>`;
-            // --- Media Asset Error Handling END ---
         });
         
         addCard('PROJECT MEDIA', `<div class="media-box">${combinedHtml}</div>`);
